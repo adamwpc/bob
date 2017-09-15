@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - dotnet restore OrderBookWebService\src\OrderBookWebService\OrderBookWebService.csproj
+      - dotnet build OrderBookWebService\src\OrderBookWebService\OrderBookWebService.csproj
+artifacts:
+  files:
+    - bin/Debug/bobapp/*

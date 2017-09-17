@@ -4,7 +4,7 @@ phases:
   build:
     commands:
       - dotnet restore $CODEBUILD_SRC_DIR/OrderBookWebService/src/OrderBookWebService/OrderBookWebService.csproj
-      - dotnet build $CODEBUILD_SRC_DIR/OrderBookWebService/src/OrderBookWebService/OrderBookWebService.csproj
+      - dotnet publish -c Release -o out $CODEBUILD_SRC_DIR/OrderBookWebService/src/OrderBookWebService/OrderBookWebService.csproj
 artifacts:
   files:
-    - bin/Debug/bobapp/*
+    - OrderBookWebService/src/OrderBookWebService/out/*
